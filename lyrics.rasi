@@ -1,0 +1,135 @@
+configuration {
+    show-icons:                 false;
+}
+
+* {
+    background:     #1e1e2e0D;
+    background-alt: #000000CC;
+    foreground:     #cdd6f4FF;
+    selected:       #89b4faFF;
+    urgent:         #f38ba8FF;
+    muted:          #6c7086FF;
+    border:         #3a3a3aCC;
+    dark:           #1e1e2eFF;
+}
+
+window {
+    transparency:               "real";
+    location:                   east;
+    anchor:                     east;
+    fullscreen:                 false;
+    width:                      560px;
+    x-offset:                   -20px;
+    y-offset:                   0px;
+    enabled:                    true;
+    cursor:                     "default";
+    background-color:           @background;
+    border:                     1px solid;
+    border-color:               @border;
+    border-radius:              10px;
+    padding:                    16px;
+}
+
+mainbox {
+    enabled:                    true;
+    spacing:                    12px;
+    background-color:           transparent;
+    children:                   [ "headerbox", "listview" ];
+}
+
+headerbox {
+    orientation:                horizontal;
+    expand:                     false;
+    spacing:                    12px;
+    padding:                    10px 12px;
+    border-radius:              10px;
+    background-color:           @background-alt;
+    text-color:                 @foreground;
+    children:                   [ "icon-cover", "message" ];
+}
+
+icon-cover {
+    expand:                     false;
+    filename:                   "~/.cache/localplayer/nocover.jpg";
+    size:                       80;
+    squared:                    true;
+    vertical-align:             0.5;
+    horizontal-align:           0.5;
+}
+
+message {
+    enabled:                    true;
+    expand:                     true;
+    vertical-align:             0.5;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    children:                   [ "textbox" ];
+}
+
+textbox {
+    background-color:           transparent;
+    text-color:                 inherit;
+    markup:                     true;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+    font:                       "JetBrainsMono Nerd Font Bold 12";
+}
+
+listview {
+    enabled:                    true;
+    columns:                    1;
+    lines:                      12;
+    dynamic:                    false;
+    fixed-height:               true;
+    cycle:                      true;
+    scrollbar:                  false;
+    layout:                     vertical;
+    spacing:                    6px;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    cursor:                     "default";
+}
+
+element {
+    enabled:                    true;
+    spacing:                    8px;
+    padding:                    6px 10px;
+    border-radius:              8px;
+    background-color:           transparent;
+    text-color:                 @foreground;
+    cursor:                     "pointer";
+}
+
+element normal.active {
+    background-color:           @selected;
+    text-color:                 @dark;
+}
+
+element alternate.normal {
+    background-color:           transparent;
+    text-color:                 @foreground;
+}
+
+element alternate.active {
+    background-color:           @selected;
+    text-color:                 @dark;
+}
+
+element selected.active {
+    background-color:           @selected;
+    text-color:                 @dark;
+}
+
+element selected.normal {
+    background-color:           transparent;
+    text-color:                 @selected;
+}
+
+element-text {
+    background-color:           transparent;
+    text-color:                 inherit;
+    cursor:                     inherit;
+    vertical-align:             0.5;
+    horizontal-align:           0.0;
+    font:                       "JetBrainsMono Nerd Font 12";
+}

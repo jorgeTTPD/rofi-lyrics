@@ -1,0 +1,9 @@
+# secrets — never commit your Genius token
+.genius.token
+# runtime cache (fetched lyrics, colors)
+lrc/
+colors/
+last.*
+# python cache
+__pycache__/
+*.pyc
