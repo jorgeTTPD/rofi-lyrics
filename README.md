@@ -4,6 +4,8 @@ Synced karaoke lyrics panel (rofi script mode) following the active player. Clic
 
 Bound to `super+i` in my bspwm setup.
 
+<p align="center"><img src="screenshot_20261113_154337.png" width="75%" alt="rofi-lyrics panel playing Amor a Primera Vista"></p>
+
 ## Files
 - `lyrics.sh` — rofi mode: player pick, fetch-on-miss, karaoke highlight, seek, dynamic wrap/width
 - `launch.sh` — launches rofi, forces focus, ticks F5 on next timestamp (hybrid ticker)
